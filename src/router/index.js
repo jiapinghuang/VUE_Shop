@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '../components/Login.vue'
 import Home from '../components/Home.vue'
+import Wecome from '../components/wecome.vue'
+import Users from '../components/user/User.vue'
 Vue.use(VueRouter)
 const routes = [{
   path: '/login',
@@ -13,7 +15,13 @@ const routes = [{
 },
 {
   path:'/home',
-  component:Home
+  component:Home,
+  redirect:'/wecome',//重定向到子路由
+  //子路由，想嵌套在home页面里，就用孩子属性
+  children:[
+    {path:'/wecome',component:Wecome},
+    {path:'/users',component:Users}
+  ]
 }
 ]
 
