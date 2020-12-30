@@ -2,7 +2,8 @@ import Vue from 'vue'
 import {
   Button,Form,FormItem,Input,Message,Container,Header,Aside,Main,
   Menu,MenuItemGroup,Submenu,MenuItem,Breadcrumb,BreadcrumbItem,Card,
-  Row,Col,TableColumn,Table,Switch,Tooltip,Pagination,Dialog,MessageBox
+  Row,Col,TableColumn,Table,Switch,Tooltip,Pagination,Dialog,MessageBox,Tag,Tree,
+  Select,Option
 }
 from 'element-ui'//按需要导入
 
@@ -37,7 +38,12 @@ Vue.use(Tooltip)
 Vue.use(Pagination)
 
 Vue.use(Dialog)
+Vue.use(Tag)
 
+Vue.use(Tree) 
+
+Vue.use(Select)
+Vue.use(Option)
 //全局挂载，在页面中使用this.$confirm可使用
 Vue.prototype.$message=Message
 Vue.prototype.$confirm=MessageBox.confirm

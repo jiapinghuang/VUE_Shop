@@ -4,6 +4,8 @@ import Login from '../components/Login.vue'
 import Home from '../components/Home.vue'
 import Wecome from '../components/wecome.vue'
 import Users from '../components/user/User.vue'
+import Rights from '../components/power/Rights.vue'
+import Roles from '../components/power/Roles.vue'
 Vue.use(VueRouter)
 const routes = [{
   path: '/login',
@@ -20,7 +22,9 @@ const routes = [{
   //子路由，想嵌套在home页面里，就用孩子属性
   children:[
     {path:'/wecome',component:Wecome},
-    {path:'/users',component:Users}
+    {path:'/users',component:Users},
+    {path:'/rights',component:Rights},
+    {path:'/roles',component:Roles}
   ]
 }
 ]
